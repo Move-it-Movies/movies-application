@@ -1,42 +1,8 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
-      "rating": "4",
-      "id": 1
-    },
-    {
-      "title": "Ace Ventura: Pet Detective",
-      "rating": "5",
-      "id": 2
-    },
-    {
-      "title": "Babe",
-      "rating": "5",
-      "id": 3
-    },
-    {
-      "title": "Mortal Kombat",
-      "rating": "2",
-      "id": 4
-    },
-    {
-      "title": "Tank Girl",
-      "rating": "5",
-      "id": 5
-    },
-    {
-      "title": "Star Wars: A New Hope",
-      "rating": "5",
-      "id": 6
-    },
-    {
       "title": "Alien",
       "id": 7
-    },
-    {
-      "title": "Ghost",
-      "id": 8
     },
     {
       "title": "Ghostbusters",

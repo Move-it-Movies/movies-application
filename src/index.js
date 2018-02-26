@@ -11,10 +11,12 @@ const getMovies = () => {
             .then(response => response.json());
 };
 
-$('#add-button').click(function(){
+$('#add-button').click(function() {
+    // $('body').slickAdd("<body></body>");
     let movie = {title: $('#input-add-field').val()};
     postMovie(movie).then(window.location.reload());
 });
+
 
 // $('#edit-button').click(function(){
 //     prompt ('Please Edit Name');
@@ -22,10 +24,27 @@ $('#add-button').click(function(){
 //     postMovie(movie);
 // });
 
-// $('#delete-button').click(function(){
-//     let movie = {title: $('#input-add-field').val()};
-//     postMovie(movie);
-// });
+//
+
+
+
+ $('#delete-button').click(function(){
+     confirm ('Are you sure you want to Delete');
+    var $currentSlide = $(".slick-slide.slick-current.slick-active");
+     var currentSlide = $('#movieScrollBar').slick('slickCurrentSlide');
+     var currentMovieId = ($currentSlide.find("input").val());
+     return fetch(`/api/movies/${currentMovieId}`, {
+         method: 'delete',
+         headers: {
+             'content-type': 'application/json'
+         }
+     })
+         .then(response => response.json())
+         .then(data => {
+             console.log(data);
+             updateMovies().then(() => window.location.reload());
+         });
+ });
 
 const postMovie = (obj) => {
     return fetch('/api/movies', {
@@ -40,21 +59,25 @@ const postMovie = (obj) => {
 
 const updateMovies = () => {
     return getMovies().then((movies) => {
-        // console.log('Here are all the movies:');
         let carousel = $('.slider-nav');
         carousel.html(null);
         movies.forEach(({title, rating, id}) => {
 
             let html = '';
-            html += `<div><h3>${title}</h3></div>`;
+            html += `<div>
+            <h3>${title}</h3>
+            <input type="hidden" value="${id}">
+            </div>`;
             carousel.append( html );
             carousel.removeClass('loading');
 
             console.log(`id#${id} - ${title} - rating: ${rating}`);
         });
     }).catch((error) => {
-        alert('Oh no! Something went wrong.\nCheck the console for details.')
+        alert('Oh no! Something went wrong.\nCheck the console for details.');
+        console.log('----------------------------');
         console.log(error);
+        console.log('----------------------------');
     });
 };
 
