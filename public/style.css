@@ -31,7 +31,7 @@ header{
     grid-row: 2;
     grid-column: 2/8;
     text-align: center;
-    padding-top: 40%;
+    /*padding-top: 40%;*/
     line-height: 1em;
 }
 
@@ -59,7 +59,7 @@ header{
     grid-column: 2/8;
 }
 
-#AddField{
+#addField{
     grid-row: 5;
     grid-column: 3/7;
 }
@@ -98,9 +98,6 @@ header{
     width: 20vw;
     float: left;
 
-
-
-
 }
 
 #star-rank2 {
@@ -108,9 +105,6 @@ header{
     grid-column: 3/4;
     width: 20vw;
     float: left;
-
-
-
 
 }
 
@@ -120,9 +114,6 @@ header{
     width: 20vw;
     float: left;
 
-
-
-
 }
 
 #star-rank4 {
@@ -131,10 +122,6 @@ header{
     width: 20vw;
     float: left;
 
-
-
-
-
 }
 
 #star-rank5 {
@@ -142,8 +129,6 @@ header{
     grid-column: 6/7;
     width: 20vw;
     float: left;
-
-
 
 }
 

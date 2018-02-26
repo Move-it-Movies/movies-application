@@ -29,6 +29,70 @@
       "title": "Star Wars: A New Hope",
       "rating": "5",
       "id": 6
+    },
+    {
+      "title": "Alien",
+      "id": 7
+    },
+    {
+      "title": "Ghost",
+      "id": 8
+    },
+    {
+      "title": "Ghostbusters",
+      "id": 9
+    },
+    {
+      "title": "Shape Of Water",
+      "id": 10
+    },
+    {
+      "title": "James and the Giant Peach",
+      "id": 11
+    },
+    {
+      "title": "Chicken Run",
+      "id": 12
+    },
+    {
+      "title": "Jumanji",
+      "id": 13
+    },
+    {
+      "title": "the DaVinci Code",
+      "id": 14
+    },
+    {
+      "title": "Inception",
+      "id": 15
+    },
+    {
+      "title": "True Grit",
+      "id": 16
+    },
+    {
+      "title": "TrainSpotting",
+      "id": 17
+    },
+    {
+      "title": "28days later",
+      "id": 18
+    },
+    {
+      "title": "28weeks Later",
+      "id": 19
+    },
+    {
+      "title": "Austin Powers",
+      "id": 20
+    },
+    {
+      "title": "Contaigon",
+      "id": 21
+    },
+    {
+      "title": "Angels and Demons",
+      "id": 22
     }
   ]
 }
