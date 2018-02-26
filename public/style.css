@@ -23,11 +23,20 @@ header{
     font-size: 20px;
 }
 
-#movieScrollBar{
-    border: solid black 5px;
-    border-radius: 15px;
+#movieScrollBar {
+    background-color: white;
+    border: solid black 2px;
+    border-radius: 7px;
     grid-row: 2;
-    grid-column: 1/9;
+    grid-column: 2/8;
+    text-align: center;
+    padding-top: 40%;
+    line-height: 1em;
+}
+
+.loading {
+    background: url("./slick-1.8.0/slick/ajax-loader.gif") no-repeat center;
+    background-size: contain;
 }
 
 #starBar{
