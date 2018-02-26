@@ -35,12 +35,12 @@ const updateMovies = () => {
 $(document).ready(function() {
 
     updateMovies();
-
+    //Make this a promise vs setTimeout
     setTimeout( () =>
         $('.slider-nav').slick({
             dots: true,
             arrows: true,
             accessibility: true
-        }) , 3000);
+        }) ,1220);
 
 });
