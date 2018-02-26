@@ -2,7 +2,7 @@ html {
     height: 100%;
     font-family: 'Inknut Antiqua', serif;
     background-color: lightsteelblue;
-    color: #fff4f1;
+
 }
 
 .container {
@@ -21,6 +21,7 @@ header{
     grid-row: 1;
     grid-column: 1/9;
     font-size: 20px;
+    color: #020000;
 }
 
 #movieScrollBar {
@@ -47,6 +48,7 @@ header{
     /*padding-left: 4%;*/
     /*padding-right: 2.5%;*/
     width: 100%;
+    color: white;
 
     /*position: relative;*/
 
@@ -85,11 +87,10 @@ header{
     font-family: 'Inknut Antiqua', serif;
 
 }
-/*#star-rank1, #star-rank2, #star-rank3, #star-rank4, #star-rank5 {*/
-    /*border-radius: 15px;*/
-    /*border: purple solid 2px;*/
+#star-rank1, #star-rank2, #star-rank3, #star-rank4, #star-rank5 {
+    color: white;
 
-/*}*/
+}
 
 #star-rank1 {
     grid-row: 3;
