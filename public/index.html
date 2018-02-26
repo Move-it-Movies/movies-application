@@ -4,63 +4,48 @@
     <meta charset="UTF-8" />
     <title>My Application</title>
     <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./slick-1.8.0/slick/slick.css">
+    <link rel="stylesheet" href="./slick-1.8.0/slick/slick-theme.css">
+    <link rel="stylesheet" href="./slick-1.8.0/slick/fonts/slick.ttf">
     <link href="https://fonts.googleapis.com/css?family=Inknut+Antiqua" rel="stylesheet">
-
-    <script type="text/javascript" src="../public/slick-1.8.0/slick/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../public/slick-1.8.0/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="../public/slick-1.8.0/slick/slick-theme.css"/>
-
-
 </head>
 <body>
 <header class="">
     <h1>Move It Movies</h1>
 </header>
 
-    <div class="scrollBar container" id="movieScrollBar">
-        <div>movie</div>
-        <div>movie</div>
-        <div>movie</div>
-        <div>movie</div>
-        <div>movie</div>
-        <div>movie</div>
+<div class="slider-nav loading" id="movieScrollBar"></div>
 
-        <!--This is where we will put the Movie Scroll Bar-->
-        <!--<p>To get started, edit <code>src/index.js</code>.</p>-->
-    </div>
-        <div class="container" id="starBar">
-            <input type="checkbox" class="star" id="star-rank1" value="1"><span><i class="starHover fas fa-star fa-6x"></i></span>
-            <input type="checkbox" class="star" id="star-rank2" value="2"><span><i class="starHover fas fa-star fa-6x"></i></span>
-            <input type="checkbox" class="star" id="star-rank3" value="3"><span><i class="starHover fas fa-star fa-6x"></i></span>
-            <input type="checkbox" class="star" id="star-rank4" value="4"><span><i class="starHover fas fa-star fa-6x"></i></span>
-            <input type="checkbox" class="star" id="star-rank5" value="5"><span><i class="starHover fas fa-star fa-6x"></i></span>
-            <!--this is where we will put the stars for movie Rating.
-            This will probably need some kind of radio button with Stars
-            as the clickable area.-->
-        </div>
+<div class="container" id="starBar">
+    <input type="checkbox" class="star" id="star-rank1" value="1"><span><i class="starHover fas fa-star fa-6x"></i></span>
+    <input type="checkbox" class="star" id="star-rank2" value="2"><span><i class="starHover fas fa-star fa-6x"></i></span>
+    <input type="checkbox" class="star" id="star-rank3" value="3"><span><i class="starHover fas fa-star fa-6x"></i></span>
+    <input type="checkbox" class="star" id="star-rank4" value="4"><span><i class="starHover fas fa-star fa-6x"></i></span>
+    <input type="checkbox" class="star" id="star-rank5" value="5"><span><i class="starHover fas fa-star fa-6x"></i></span>
+    <!--this is where we will put the stars for movie Rating.
+    This will probably need some kind of radio button with Stars
+    as the clickable area.-->
+</div>
 
-    <div class="container" id="editDelete">
+<div class="container" id="editDelete">
 
-        <button id="edit-button" type="button">Edit</button>
-        <button id="delete-button" type="submit">Delete</button>
-        <!--This is where the edit and delete button will be. Also the
-        Add input field. Add input should send info to db.json.
-        info needed for db.json is "title" and "'rating' of 1-5 stars"-->
-    </div>
-    <div class="container" id="AddField">
-        <div>ADD A MOVIE HERE!</div>
-        <input type="text" id="input-add-field" placeholder="Enter movie title here: ">
+    <button id="edit-button" type="button">Edit</button>
+    <button id="delete-button" type="submit">Delete</button>
+    <!--This is where the edit and delete button will be. Also the
+    Add input field. Add input should send info to db.json.
+    info needed for db.json is "title" and "'rating' of 1-5 stars"-->
+</div>
+<div class="container" id="AddField">
+    <div>ADD A MOVIE HERE!</div>
+    <input type="text" id="input-add-field" placeholder="Enter movie title here: ">
 
-        <button type="submit" id="add-button">Add</button>
+    <button type="submit" id="add-button">Add</button>
 
-        <!--This is where the edit and delete button will be. Also the
-        Add input field. Add input should send info to db.json.
-        info needed for db.json is "title" and "'rating' of 1-5 stars"-->
-    </div>
-    <script src="/main.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.8.0/slick.min.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <!--This is where the edit and delete button will be. Also the
+    Add input field. Add input should send info to db.json.
+    info needed for db.json is "title" and "'rating' of 1-5 stars"-->
+</div>
+<script src="/main.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>
