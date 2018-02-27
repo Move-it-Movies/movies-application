@@ -12,25 +12,39 @@ const getMovies = () => {
 };
 
 $('#add-button').click(function() {
-    // $('body').slickAdd("<body></body>");
     let movie = {title: $('#input-add-field').val()};
     postMovie(movie).then(window.location.reload());
 });
 
 
-// $('#edit-button').click(function(){
-//     prompt ('Please Edit Name');
-//     let this.movie = {title: $('#input-add-field').val()};
-//     postMovie(movie);
-// });
 
-//
 
+
+
+
+
+
+
+
+$('#edit-button').click(function() {
+    prompt('Edit Movie title.');
+     patch('/api/movies');
+    var $currentSlide = $(".slick-slide.slick-current.slick-active");
+    var currentSlide = $('#movieScrollBar').slick('slickCurrentSlide');
+    let movieTitle = (currentSlide("title"));
+    console.log(movieTitle);
+    // postMovie(movieTitle).then(window.location.reload());
+});
+
+    //
+
+    // var currentSlide = $('#movieScrollBar').slick('slickCurrentSlide');
+    // var currentMovieTitle = ($currentSlide.find('title').val());
 
 
  $('#delete-button').click(function(){
      confirm ('Are you sure you want to Delete');
-    var $currentSlide = $(".slick-slide.slick-current.slick-active");
+     var $currentSlide = $(".slick-slide.slick-current.slick-active");
      var currentSlide = $('#movieScrollBar').slick('slickCurrentSlide');
      var currentMovieId = ($currentSlide.find("input").val());
      return fetch(`/api/movies/${currentMovieId}`, {
@@ -82,24 +96,56 @@ const updateMovies = () => {
 };
 
 $(document).ready(function() {
-
     updateMovies().then(() => {
-        $('.slider-nav').slick({
-            dots: true,
-            arrows: true,
-            accessibility: true
-        })
-    });
-
+    $('.slider-nav').slick({
+        dots: true,
+        arrows: true,
+        accessibility: true
+    })
 });
 
+
+    let input = $('.svg-inline--fa');
+    console.log(input);
+    let inputs = input.toArray();
+    console.log(inputs);
+
+    let hovered;
+    inputs.forEach((e,i) => {
+        e.addEventListener('mouseover', function() {
+            hovered = i;
+            inputs.forEach( (y, z) => {
+                if( z <= hovered ) {
+                    changeColor(y);
+                }
+            });
+        });
+        e.addEventListener('mouseleave', (function() {
+            inputs.forEach( (e, i) => {
+                e.style.color = '#FFFFFF';
+            });
+        }));
+
+        e.addEventListener('click', function() {
+
+        })
+    });
+    function changeColor(el) {
+        el.style.color = '#FFC107';
+    }
+
+
+
+
+});
+//
 // $('#term').focus(function(){
 //     var full = $("#poster").has("img").length ? true : false;
 //     if(full == false){
 //         $('#poster').empty();
 //     }
 // });
-
+//
 // var getPoster = function(){
 //
 //     var film = $('#term').val();
@@ -119,7 +165,7 @@ $(document).ready(function() {
 //             } else {
 //                 $.getJSON("https://api.themoviedb.org/3/search/movie?api_key=1a44ae2bee8614564f3f36bf1aa247b1b&query=goonies&callback=?", function(json) {
 //
-//                     // console.log(json);
+//                     console.log(json);
 //                     $('#poster').html('<div class="alert"><p>We\'re afraid nothing was found for that search.</p></div><p>Perhaps you were looking for The Goonies?</p><img id="thePoster" src="http://image.tmdb.org/t/p/w500/' + json[0].poster_path + ' class="img-responsive" />');
 //                 });
 //             }
@@ -136,7 +182,7 @@ $(document).ready(function() {
 //         getPoster();
 //     }
 // });
-
-
-
-
+//
+//
+//
+//
